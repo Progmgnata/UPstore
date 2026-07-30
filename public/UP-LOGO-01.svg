@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4496.09 2300.01">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Gradiente_sem_nome_7);
+      }
+
+      .cls-2 {
+        fill: url(#Gradiente_sem_nome_7-2);
+      }
+
+      .cls-3 {
+        fill: url(#Gradiente_sem_nome_7-3);
+      }
+    </style>
+    <radialGradient id="Gradiente_sem_nome_7" data-name="Gradiente sem nome 7" cx="-840.96" cy="2979.67" fx="-840.96" fy="2979.67" r="5440.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f75b2b"/>
+      <stop offset=".99" stop-color="#f93728"/>
+    </radialGradient>
+    <radialGradient id="Gradiente_sem_nome_7-2" data-name="Gradiente sem nome 7" cx="-840.96" cy="2979.67" fx="-840.96" fy="2979.67" r="5440.63" xlink:href="#Gradiente_sem_nome_7"/>
+    <radialGradient id="Gradiente_sem_nome_7-3" data-name="Gradiente sem nome 7" cx="-840.96" cy="2979.67" fx="-840.96" fy="2979.67" r="5440.63" xlink:href="#Gradiente_sem_nome_7"/>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <path class="cls-1" d="m2321.24,0l-474.78,1387.35c-96.2,281.12-251.41,506.24-466.2,664.12-223.23,164.09-489.76,248.53-792.99,248.53s-501.7-82.83-563.77-243.92c-59.84-155.09-4.42-382.02,155.45-668.74L865.1,156.8C919.07,60,1021.22,0,1132.06,0h466.71l-644.44,1413.53c-22.49,49.34-20.41,74.23,6.48,74.23,14.91,0,30.47-8.02,46.56-24.02,16.03-15.93,27.92-32.65,35.72-50.21L1671.38,0h649.87Z"/>
+      <path class="cls-2" d="m2885.27,1665.67h-219.94l-132.96,582.49h-1371.75s257.48-23.14,489.64-297.75c102.85-121.66,178.59-242.04,279.18-522.54C2061,1060.98,2399.28,0,2399.28,0h820.51c177.89,0,306.97,54.67,389.38,166.82,85.32,116.18,117.48,278.88,93.05,494.82l-10.81,95.55c-26.94,238.1-109.1,448.91-249.9,626.25-147.56,185.91-334.8,282.23-556.24,282.23Zm-45.95-744.1c47.1,0,79.32-39.7,96.36-117.86l29.56-135.64c15.74-72.22,1.09-107.77-43.67-107.77h-3.95l-82.46,361.27h4.15Z"/>
+      <path class="cls-3" d="m3849.85,0h646.24v594.95c0,84.09-7.7,170.04-23.29,256.69l-58.47,325.12h-602.4l-25.41-325.12c-6.77-86.65-5.73-172.6,2.82-256.69L3849.85,0Zm-191.75,2248.16l89.89-922.91h717.38l-3.69,922.91h-803.58Z"/>
+    </g>
+  </g>
+</svg>

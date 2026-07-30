@@ -1,49 +1,108 @@
+/* ==========================================================================
+   1. IMPORTE DE FONTES & VARIÁVEIS (DESIGN SYSTEM)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores Principais */
+  --color-primary: #e52421;       /* Vermelho vibrante da logo/destaque */
+  --color-text-dark: #0f0f0f;     /* Preto para os títulos principais */
+  --color-text-muted: #555555;    /* Cinza para links e subtextos */
+  --color-bg-light: #f8f8f8;      /* Fundo da página */
+  --color-white: #ffffff;
+  
+  /* Tipografia */
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secundary: 'Poppins', sans-serif;
+  
+  /* Transições e Bordas */
+  --radius-pill: 50px;
+  --transition-fast: 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==========================================================================
+   2. RESET CSS
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html {
+html, body {
+  width: 100%;
   height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
+/* ==========================================================================
+   3. ESTILOS ELEMENTARES (Links, Imagens, Listas)
+   ========================================================================== */
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   4. COMPONENTES REUTILIZÁVEIS / UTILITÁRIOS
+   ========================================================================== */
+
+/* Barra de Busca Transparente (Glassmorphism) */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Destaque de Texto (Título Principal) */
+.text-highlight {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+/* Indicador Lateral de Navegação (Slider/Carrossel) */
+.slider-indicator {
+  width: 2px;
+  height: 40px;
+  background-color: #ddd;
+  position: relative;
+}
+
+.slider-indicator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--color-text-dark);
 }
