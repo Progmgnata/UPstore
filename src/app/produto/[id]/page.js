@@ -32,16 +32,21 @@ export default function PaginaProduto({ params }) {
   return (
     <div className={styles.container}>
       {product.image && (
-        <Image 
-          src={product.image} 
-          alt={product.name} 
-          width={400} 
-          height={400} 
-        />
+        <div className={styles.productImage}>
+          <Image 
+            src={product.image} 
+            alt={product.name} 
+            width={400} 
+            height={400} 
+          />
+        </div>
       )}
-      <h1>{product.name}</h1>
-      <h2>{formatCurrency(product.price)}</h2>
-      <p>{product.description}</p>
+      <div className={styles.productInfo}>
+        <h1>{product.name}</h1>
+        <h2>{formatCurrency(product.price)}</h2>
+        <p>{product.description}</p>
+      </div>
+      <button className={styles.addToCartButton}>Adicionar ao Carrinho</button>
     </div>
   );
 }
