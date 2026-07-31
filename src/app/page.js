@@ -1,12 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { getProductsBySlug } from "../services/getProduct";
+import { getProducts } from "../services/getProduct";
 import { formatCurrency } from "../lib/formatCurrency";
 
-
 export default async function Home() {
-  const products = await getProductsBySlug();
+  const products = await getProducts();
   
   return (
     <div className={styles.page}>
@@ -22,7 +21,7 @@ export default async function Home() {
         <div className={styles.logoContainer}>
           <Image
           className={styles.logo}
-          src="/"
+          src="/public/UP-TAGLINE-2.svg"
           alt="Produto"
           width= {500}
           height= {100}
@@ -35,10 +34,10 @@ export default async function Home() {
           
           <section className={styles.section}>
             {products.map((product) => (
-              <Link key={product.id} href={`/produto/${product.slug}`}>
+              <Link key={product.id} href={`/produto/${product.id}`}>
                 <div className={styles.product}>
                   <Image
-                    src={product.imageUrl}
+                    src={product.image}
                     alt={product.name}
                     width={200}
                     height={200}

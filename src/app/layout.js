@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
             src="/UP-LOGO-01.svg"
             alt="UPstore logo"
             width={80}
-            height={30}
+            height={25}
             priority
           />
 
@@ -45,7 +45,6 @@ export default function RootLayout({ children }) {
               <li><Link href="/promo">Promoções</Link></li>
             </ul>
           </nav>
-
           {/* Campo de Busca + Botão/Ícone */}
           <div className={styles.searchContainer}>
             <input
@@ -57,9 +56,24 @@ export default function RootLayout({ children }) {
               🔍
             </button>
           </div>
+          <div className={styles.cartIcon}>
+              <Link href="/cart" aria-label="Carrinho de Compras">
+                🛒
+              </Link>
+            </div>
         </header>
         <div>{children}</div>
         <footer className={styles.footer}>
+          <div className={styles.footerLinks}>
+            <Link href="/about">Sobre Nós</Link>
+            <Link href="/contact"> | Contato</Link>
+            <Link href="/privacy"> | Política de Privacidade</Link>
+            <Link href="/terms"> | Termos de Serviço</Link>
+          </div>
+          <div className={styles.footerSocial}>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
           <p>&copy; {new Date().getFullYear()} UP! store. Todos os direitos reservados.</p>
         </footer>
       </body>
