@@ -1,0 +1,109 @@
+/* Cabeçalho principal organizando os elementos em linha */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+}
+
+/* Logo */
+.logo {
+  object-fit: contain;
+}
+
+/* Links do Menu */
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Container de Busca em Estilo Vidro (Glassmorphism) */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: var(--color-white, #ffffff);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  padding: 6px 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.searchContainer:focus-within {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Campo de entrada de texto transparente */
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #333;
+  width: 140px;
+}
+
+.searchInput::placeholder {
+  color: #888;
+}
+
+/* Botão de Busca */
+.searchButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.searchButton:hover {
+  opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  padding: 2rem 3rem;
+  background-color: var(--color-bg-light, #fff9e9);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+  }
+}

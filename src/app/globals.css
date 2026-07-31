@@ -1,14 +1,12 @@
-/* ==========================================================================
-   1. IMPORTE DE FONTES & VARIÁVEIS (DESIGN SYSTEM)
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
 
 :root {
   /* Cores Principais */
-  --color-primary: #e52421;       /* Vermelho vibrante da logo/destaque */
-  --color-text-dark: #0f0f0f;     /* Preto para os títulos principais */
-  --color-text-muted: #555555;    /* Cinza para links e subtextos */
-  --color-bg-light: #f8f8f8;      /* Fundo da página */
+  --color-primary: #f93728;       
+  --color-text-dark: #0f0f0f;     
+  --color-text-muted: #494949;    
+  --color-alternate: #e2fa28;
+  --color-bg-light: #fff9e9;      
   --color-white: #ffffff;
   
   /* Tipografia */
@@ -21,7 +19,7 @@
 }
 
 /* ==========================================================================
-   2. RESET CSS
+    RESET CSS
    ========================================================================== */
 *,
 *::before,
@@ -43,7 +41,7 @@ html, body {
 }
 
 /* ==========================================================================
-   3. ESTILOS ELEMENTARES (Links, Imagens, Listas)
+   ESTILOS ELEMENTARES (Links, Imagens, Listas)
    ========================================================================== */
 a {
   text-decoration: none;

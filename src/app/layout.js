@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,31 +21,47 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-
+    <html lang="pt-BR" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <header>
-          <image
+        <header className={styles.header}>
+          {/* Logo */}
+          <Image
             className={styles.logo}
             src="/UP-LOGO-01.svg"
             alt="UPstore logo"
-            width={100}
-            height={20}
+            width={80}
+            height={30}
             priority
           />
-          <div className={styles.intro}>
-            <nav>
-              <ul>
-                <li><Link href="/">Novidade</Link></li>
-                <li><Link href="/man">Homens</Link></li>
-                <li><Link href="/women">Mulheres</Link></li>
-                <li><Link href="/kids">Crianças</Link></li>
-              </ul>
-            </nav>
+
+          {/* Links de Navegação */}
+          <nav className={styles.nav}>
+            <ul>
+              <li><Link href="/">Lançamento</Link></li>
+              <li><Link href="/man">Homens</Link></li>
+              <li><Link href="/women">Mulheres</Link></li>
+              <li><Link href="/kids">Crianças</Link></li>
+              <li><Link href="/collections">Coleções</Link></li>
+              <li><Link href="/promo">Promoções</Link></li>
+            </ul>
+          </nav>
+
+          {/* Campo de Busca + Botão/Ícone */}
+          <div className={styles.searchContainer}>
+            <input
+              type="text"
+              placeholder="Pesquisar..."
+              className={styles.searchInput}
+            />
+            <button className={styles.searchButton} aria-label="Buscar">
+              🔍
+            </button>
           </div>
         </header>
         <div>{children}</div>
-        <footer></footer>
+        <footer className={styles.footer}>
+          <p>&copy; {new Date().getFullYear()} UP! store. Todos os direitos reservados.</p>
+        </footer>
       </body>
     </html>
   );

@@ -1,140 +1,117 @@
 .page {
-  --background: #fff;
-  --foreground: #fff;
-  --text-primary: #000;
-  --text-secondary: #666;
-  --button-primary-hover: #000;
-  --button-secondary-hover: #f0f0f0;
-  --button-secondary-border: #f0f0f0;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 4rem;
+  background-color: var(--color-bg-light, #fff9e9);
+  font-family: var(--font-main, 'Helvetica Neue', Helvetica, Arial, sans-serif);
 }
 
 .main {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  gap: 2.5rem;
 }
 
-.intro {
+/* Marca / Logo */
+.logoContainer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(241, 63, 14, 0.7) 0%, rgba(189, 228, 34, 0.5) 100%);
+}
+
+.logo {
+  object-fit: contain;
+}
+
+/* Seção de Introdução / Título da Landing Page */
+.intro {
+  margin-top: 1rem;
+  max-width: 800px;
 }
 
 .intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-text-dark, #0f0f0f);
+  letter-spacing: -0.02em;
 }
 
 .intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--color-text-muted, #555);
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
+/* Seção de Produtos */
+.list {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.ctas a {
+.list h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-dark, #0f0f0f);
+}
+
+/* Grid de Produtos */
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Individual de Produto */
+.product {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.product img {
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.product h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.product p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary, #e52421);
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
+/* Responsividade */
+@media (max-width: 768px) {
   .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+    padding: 1.5rem 1.5rem;
+  }
+  .logoContainer{
+    justify-content: center;
+    width: 100%;
+  }
+  .intro h1 {
+    font-size: 2.25rem;
   }
 }

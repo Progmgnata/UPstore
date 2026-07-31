@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.detailsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailsContainer h1 {
+  font-size: 2.5rem;
+  color: #111;
+}
+
+.preco {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #e52421;
+}
+
+.descricao {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.buyButton {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.buyButton:hover {
+  background-color: #e52421;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
