@@ -40,7 +40,7 @@ export default function PaginaProduto({ params }) {
         />
       )}
       <h1>{product.name}</h1>
-      <p>{formatCurrency(product.price)}</p>
+      <h2>{formatCurrency(product.price)}</h2>
       <p>{product.description}</p>
     </div>
   );

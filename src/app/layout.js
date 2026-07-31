@@ -33,28 +33,27 @@ export default function RootLayout({ children }) {
             height={25}
             priority
           />
-
-          {/* Links de Navegação */}
-          <nav className={styles.nav}>
-            <ul>
-              <li><Link href="/">Lançamento</Link></li>
-              <li><Link href="/man">Homens</Link></li>
-              <li><Link href="/women">Mulheres</Link></li>
-              <li><Link href="/kids">Crianças</Link></li>
-              <li><Link href="/collections">Coleções</Link></li>
-              <li><Link href="/promo">Promoções</Link></li>
-            </ul>
-          </nav>
-          {/* Campo de Busca + Botão/Ícone */}
           <div className={styles.searchContainer}>
+            {/* Links de Navegação */}
+            <nav className={styles.nav}>
+              <ul>
+                <li><Link href="/">Lançamento</Link></li>
+                <li><Link href="/man">Homens</Link></li>
+                <li><Link href="/women">Mulheres</Link></li>
+                <li><Link href="/kids">Crianças</Link></li>
+                <li><Link href="/collections">Coleções</Link></li>
+                <li><Link href="/promo">Promoções</Link></li>
+              </ul>
+            </nav>
+          </div>
+          <div className={styles.searchContainer}>
+            {/* Campo de Busca + Botão/Ícone */}
             <input
               type="text"
               placeholder="Pesquisar..."
               className={styles.searchInput}
             />
-            <button className={styles.searchButton} aria-label="Buscar">
-              🔍
-            </button>
+            <button className={styles.searchButton} aria-label="Buscar">🔍</button>
           </div>
           <div className={styles.cartIcon}>
               <Link href="/cart" aria-label="Carrinho de Compras">
@@ -71,7 +70,7 @@ export default function RootLayout({ children }) {
             <Link href="/terms"> | Termos de Serviço</Link>
           </div>
           <div className={styles.footerSocial}>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
           <p>&copy; {new Date().getFullYear()} UP! store. Todos os direitos reservados.</p>

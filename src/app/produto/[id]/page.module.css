@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.imageContainer {
+.container Image {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -16,25 +16,18 @@
   padding: 2rem;
 }
 
-.detailsContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.detailsContainer h1 {
+.container h1 {
   font-size: 2.5rem;
   color: #111;
 }
 
-.preco {
+.container h2 {
   font-size: 2rem;
   font-weight: 800;
   color: #e52421;
 }
 
-.descricao {
+.container p {
   font-size: 1rem;
   color: #666;
   line-height: 1.6;

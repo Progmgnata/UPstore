@@ -21,7 +21,7 @@ export default async function Home() {
         <div className={styles.logoContainer}>
           <Image
           className={styles.logo}
-          src="/public/UP-TAGLINE-2.svg"
+          src="/UP-TAGLINE-2.svg"
           alt="Produto"
           width= {500}
           height= {100}
